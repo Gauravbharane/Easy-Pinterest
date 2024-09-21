@@ -1,0 +1,125 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    scroll-behavior: smooth; 
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 16px;
+    color: rgb(0, 0, 0); 
+    
+}
+.container{
+    width: 1400px;
+    margin: 20px auto;
+    columns: 4;
+    column-gap:20px ;
+}
+.container .box{
+    width: 100%;
+    margin-bottom: 10px;
+    break-inside: avoid;
+}
+.container .box img{
+    max-width: 100%;
+    border-radius:15px ;
+}
+.container .box img:hover{
+    box-shadow: 10px 10px 20px rgba(36, 36, 36, 0.5);
+    transition-duration: 0.2s;
+
+
+}
+@media (max-width:1200px){
+    .container{
+        width: calc(100% - 40px);
+        columns: 3;
+    }
+}
+@media (max-width:768px){
+    .container{
+        columns: 2;
+    }
+}
+@media (max-width:480px){
+    .container{
+        columns: 2;
+    }
+}
+
+
+/* Top Navbar */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    
+
+}
+.logo{
+   
+   color: red;
+   margin-left: 20px;
+   font-weight: 600;
+   font-size: 25px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    font-weight: 600;
+}
+
+.nav-links li {
+    margin: 0 10px;
+}
+
+.search-bar {
+    padding: 8px;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+}
+
+.icon, .bottom-icon {
+    margin: 0 10px;
+    font-size: 20px;
+    color: black;
+    text-decoration: none;
+}
+
+.profile-icon {
+    border-radius: 50%;
+    padding: 5px;
+}
+
+
+/* Floating Bottom Navbar */
+.bottom-navbar {
+    display: none; /* Hidden by default */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: white;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    justify-content: space-around;
+    padding: 10px 0;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .navbar .nav-links, .navbar-right, .search-bar {
+        display: none; /* Hide on mobile */
+    }
+    
+    .bottom-navbar {
+        display: flex; /* Show Bottom Navbar */
+    }
+}
